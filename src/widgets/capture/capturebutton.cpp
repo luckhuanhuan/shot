@@ -147,25 +147,22 @@ void CaptureButton::setColor(const QColor &c) {
 QColor CaptureButton::m_mainColor = ConfigHandler().uiMainColorValue();
 
 static std::map<CaptureButton::ButtonType, int> buttonTypeOrder {
-    { CaptureButton::TYPE_PENCIL,             0 },
-    { CaptureButton::TYPE_DRAWER,             1 },
-    { CaptureButton::TYPE_ARROW,              2 },
-    { CaptureButton::TYPE_SELECTION,          3 },
-    { CaptureButton::TYPE_RECTANGLE,          4 },
-    { CaptureButton::TYPE_CIRCLE,             5 },
-    { CaptureButton::TYPE_MARKER,             6 },
-    { CaptureButton::TYPE_TEXT,               7 },
-    { CaptureButton::TYPE_BLUR,               8 },
-    { CaptureButton::TYPE_SELECTIONINDICATOR, 9 },
-    { CaptureButton::TYPE_MOVESELECTION,     10 },
-    { CaptureButton::TYPE_UNDO,              11 },
-    { CaptureButton::TYPE_REDO,              12 },
-    { CaptureButton::TYPE_COPY,              13 },
-    { CaptureButton::TYPE_SAVE,              14 },
-    { CaptureButton::TYPE_EXIT,              15 },
-    { CaptureButton::TYPE_IMAGEUPLOADER,     16 },
-    { CaptureButton::TYPE_OPEN_APP,          17 },
-    { CaptureButton::TYPE_PIN,               18 },
+    { CaptureButton::TYPE_MOVESELECTION,            0},     //截图
+    { CaptureButton::TYPE_SELECTIONINDICATOR,       1},     //录屏
+    { CaptureButton::TYPE_RECTANGLE,                2},     //矩形
+    { CaptureButton::TYPE_CIRCLE,                   3},     //圆形
+    { CaptureButton::TYPE_DRAWER,                   4},     //直线
+    { CaptureButton::TYPE_ARROW,                    5},     //箭头
+    { CaptureButton::TYPE_PENCIL,                   6},     //画笔
+    { CaptureButton::TYPE_MARKER,                   7},     //mark 标记
+    { CaptureButton::TYPE_TEXT,                     8},     //字体
+    { CaptureButton::TYPE_BLUR,                     9},     //模糊
+    { CaptureButton::TYPE_UNDO,                    10},     //撤回
+    { CaptureButton::TYPE_OPEN_APP,                11},     //选项
+    { CaptureButton::TYPE_EXIT,                    12},    //退出
+    { CaptureButton::TYPE_COPY,                    13},    //复制
+    { CaptureButton::TYPE_SAVE,                    14},   //保存
+    { CaptureButton::TYPE_PIN,                     15}, //顶针
 };
 
 int CaptureButton::getPriorityByButton(CaptureButton::ButtonType b) {
@@ -174,23 +171,20 @@ int CaptureButton::getPriorityByButton(CaptureButton::ButtonType b) {
 }
 
 QVector<CaptureButton::ButtonType> CaptureButton::iterableButtonTypes = {
-    CaptureButton::TYPE_PENCIL,
-    CaptureButton::TYPE_DRAWER,
-    CaptureButton::TYPE_ARROW,
-    CaptureButton::TYPE_SELECTION,
-    CaptureButton::TYPE_RECTANGLE,
-    CaptureButton::TYPE_CIRCLE,
-    CaptureButton::TYPE_MARKER,
-    CaptureButton::TYPE_TEXT,
-    CaptureButton::TYPE_BLUR,
-    CaptureButton::TYPE_SELECTIONINDICATOR,
-    CaptureButton::TYPE_MOVESELECTION,
-    CaptureButton::TYPE_UNDO,
-    CaptureButton::TYPE_REDO,
-    CaptureButton::TYPE_COPY,
-    CaptureButton::TYPE_SAVE,
-    CaptureButton::TYPE_EXIT,
-    CaptureButton::TYPE_IMAGEUPLOADER,
-    CaptureButton::TYPE_OPEN_APP,
-    CaptureButton::TYPE_PIN,
+   CaptureButton::TYPE_MOVESELECTION,
+   CaptureButton::TYPE_SELECTIONINDICATOR,
+   CaptureButton::TYPE_RECTANGLE,
+   CaptureButton::TYPE_CIRCLE,
+   CaptureButton::TYPE_DRAWER,
+   CaptureButton::TYPE_ARROW,
+   CaptureButton::TYPE_PENCIL,
+   CaptureButton::TYPE_MARKER,
+   CaptureButton::TYPE_TEXT,
+   CaptureButton::TYPE_BLUR,
+   CaptureButton::TYPE_UNDO,
+   CaptureButton::TYPE_OPEN_APP,
+   CaptureButton::TYPE_EXIT,
+   CaptureButton::TYPE_COPY,
+   CaptureButton::TYPE_SAVE,
+   CaptureButton::TYPE_PIN
 };

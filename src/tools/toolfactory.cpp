@@ -58,9 +58,9 @@ CaptureTool* ToolFactory::CreateTool(
     case CaptureButton::TYPE_EXIT:
         tool = new ExitTool(parent);
         break;
-    case CaptureButton::TYPE_IMAGEUPLOADER:
+    /*case CaptureButton::TYPE_IMAGEUPLOADER:
         tool = new ImgurUploaderTool(parent);
-        break;
+        break;*/
     case CaptureButton::TYPE_DRAWER:
         tool = new LineTool(parent);
         break;
@@ -79,18 +79,18 @@ CaptureTool* ToolFactory::CreateTool(
     case CaptureButton::TYPE_SAVE:
         tool = new SaveTool(parent);
         break;
-    case CaptureButton::TYPE_SELECTION:
+    /*case CaptureButton::TYPE_SELECTION:
         tool = new SelectionTool(parent);
-        break;
+        break;*/
     case CaptureButton::TYPE_SELECTIONINDICATOR:
         tool = new SizeIndicatorTool(parent);
         break;
     case CaptureButton::TYPE_UNDO:
         tool = new UndoTool(parent);
         break;
-    case CaptureButton::TYPE_REDO:
+    /*case CaptureButton::TYPE_REDO:
         tool = new RedoTool(parent);
-        break;
+        break;*/
     case CaptureButton::TYPE_OPEN_APP:
         tool = new AppLauncher(parent);
         break;
